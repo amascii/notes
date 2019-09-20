@@ -48,4 +48,7 @@ Juno makes the women set the ships on fire, but Nepture helps the Trojans with s
 At Cumae, Deiphobe guides Aeneas to the Underworld. Anchises tells Aeneas of their lineage and hardships to come. He walks out through the ivory gate.
 
 ## BOOK SEVEN - Beachhead in Latium, Armies Gather
-Past Circe's island.
+Passing Circe's island, they come to Latium. They offer an olive branch to king Latinus. Remembering the prophecy of a foreign son-in-law, he welcomes them. However, Juno tells Allecto, goddess of War, to spice things up. War is coming...
+
+## BOOK EIGHT - The Shield of Aeneas
+
