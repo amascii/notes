@@ -13,7 +13,7 @@
 </dl>
 
 ## BOOK ONE - Safe Haven After Storm
-Aeneas arrives at Carthage. Queen Dido welcomes him. Venus uses Cupid to make the queen fall in love with Aeneas' son, Ascanius/Iulus/Ilus. Aeneas proceeds to tell his tale.
+Aeneas arrives at Carthage. Queen Dido welcomes him. Venus uses Cupid to make the queen fall in love with Aeneas. Aeneas proceeds to tell his tale.
 
 ## BOOK TWO - The Finals Hours of Troy
 The Greeks breach Troy with a huge horse. They then raze Troy, however Aeneas & peeps escape (with Venus' guidance).
@@ -30,3 +30,22 @@ The Greeks breach Troy with a huge horse. They then raze Troy, however Aeneas & 
 And we are up to date.
 
 ## BOOK FOUR - The Tragic Queen of Carthage
+The queen falls in love with Aeneas; they get married. Hermes reminds Aeneas of the land he must found, prompting him to leave Dido. She commits suicide.
+
+## BOOK FIVE - Funeral Games for Anchises
+Violent seas force Aeneas andthem to Sicily, where they previously buried Anchises one year ago. Acestes, ol' trojan friend, welcomes them.
+<ul>
+  <li>Boat race</li>
+  <li>Foot race</li>
+  <li>Boxing</li>
+  <li>Archery</li>
+  <li>Parade</li>
+</ul>
+Juno makes the women set the ships on fire, but Nepture helps the Trojans with some rain. Anchises' ghost prophesies: "head to the Underworld, learn your future".
+
+## BOOK SIX - Kingdom of the Dead
+<p>Sibyl: prophetess</p>
+At Cumae, Deiphobe guides Aeneas to the Underworld. Anchises tells Aeneas of their lineage and hardships to come. He walks out through the ivory gate.
+
+## BOOK SEVEN - Beachhead in Latium, Armies Gather
+Past Circe's island.
