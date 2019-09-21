@@ -51,4 +51,7 @@ At Cumae, Deiphobe guides Aeneas to the Underworld. Anchises tells Aeneas of the
 Passing Circe's island, they come to Latium. They offer an olive branch to king Latinus. Remembering the prophecy of a foreign son-in-law, he welcomes them. However, Juno tells Allecto, goddess of War, to spice things up. War is coming...
 
 ## BOOK EIGHT - The Shield of Aeneas
+Venus tells Aeneas to join forces with King Evander in order to take on Latium. She asks Vulcan (Hephaestus) to make Aeneas some armor and a really cool shield, engraved with future events.
+
+## BOOK NINE - Enemy at the Gates
 
