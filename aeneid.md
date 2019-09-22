@@ -60,3 +60,6 @@ Latins attack; Trojans defend from within city walls and ramparts. Nisus and Eur
 Aeneas joins forces with King Tarchon; they head to the Trojan encampment and engage in war. Pallas, Aeneas and Turnus go HAM. Turnus kills Pallas. Juno leads Turnus away from battle using Aeneas' spectre. Aeneas kills Lausus, Mezentius' son. Mezentius goes down.
 
 ## BOOK ELEVEN - Camilla's Finest Hour
+Timeout for burying the dead. Both sides get ready to restart the war. This time Camilla goes HAM, but is stopped by Arruns. With Camilla gone, the Latins are put to rout. Before Turnus and Aeneas can engage, night falls. They set up camp.
+
+## BOOK TWELVE - The Sword Decides All
