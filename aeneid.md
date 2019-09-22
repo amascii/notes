@@ -57,4 +57,6 @@ Venus tells Aeneas to join forces with King Evander in order to take on Latium. 
 Latins attack; Trojans defend from within city walls and ramparts. Nisus and Euryalus are sent to inform Aeneas of the attack. On their way, they slaughter many Latin captains, but are eventually caught and killed. Turnus breaches the city walls. Upon being cornered, the Tiber carries him back to friends.
 
 ## BOOK TEN - Captains Fight and Die
+Aeneas joins forces with King Tarchon; they head to the Trojan encampment and engage in war. Pallas, Aeneas and Turnus go HAM. Turnus kills Pallas. Juno leads Turnus away from battle using Aeneas' spectre. Aeneas kills Lausus, Mezentius' son. Mezentius goes down.
 
+## BOOK ELEVEN - Camilla's Finest Hour
