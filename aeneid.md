@@ -54,7 +54,7 @@ Passing Circe's island, they come to Latium. They offer an olive branch to king 
 Venus tells Aeneas to join forces with King Evander in order to take on Latium. She asks Vulcan (Hephaestus) to make Aeneas some armor and a really cool shield, engraved with future events.
 
 ## BOOK NINE - Enemy at the Gates
-Latins attack; Trojans defend from within city walls and ramparts. Nisus and Euryalus are sent to inform Aeneas of the attack. On their way, they slaughter many Latin captains, but are eventually caught and killed.
+Latins attack; Trojans defend from within city walls and ramparts. Nisus and Euryalus are sent to inform Aeneas of the attack. On their way, they slaughter many Latin captains, but are eventually caught and killed. Turnus breaches the city walls. Upon being cornered, the Tiber carries him back to friends.
 
 ## BOOK TEN - Captains Fight and Die
 
