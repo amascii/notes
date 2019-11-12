@@ -101,20 +101,23 @@ g x = aux x 1
 ```haskell
 -- answer
 -- 1
-f :: (Integral a) => a -> [a]
-f x
-  | x == 0 = [0]
-  | even x = x : f (x - 2)
-  | otherwise = f (x - 1)
-f x = aux x [0]
+f :: Int -> [Int]
+f x = aux x []
   where
-  aux :: (Integral a) => a -> [a] -> [a]
+  aux :: Int -> [Int] -> [Int]
   aux x res
-    | x == 0 = res
+    | x == 0 = 0 : res
     | even x = aux (x - 2) (x : res) 
     | otherwise = aux (x - 1) res
 -- 2                
-
+-- answer
+g :: [Int] -> [Int]
+g l = aux l []
+  where
+  aux :: [Int] -> [Int] -> [Int]
+  aux l res
+    | l == [] = reverse res
+    | otherwise = aux (tail l) (- (head l) : res)
 ```
 
 #### Exercise 17 - Experimenting program termination
@@ -151,5 +154,87 @@ h x
   | otherwise x + h (x + 2)
   
 -- answer
-
+x <= 9
 ```
+
+#### Exercise 18 - Experimenting pattern matching
+1. Evaluate.
+```haskell
+f 1 _ = "result1"
+f _ _ = "result2"
+f _ 1 = "result3"
+f 2 3
+f 2 1
+f 1 1
+
+-- answer
+= "result2"
+= "result2"
+= "result1"
+```
+
+2. Evaluate.
+```haskell
+g True x = x
+g False 0 = -1
+g _ x = x + 1
+g False 1
+g True 0
+g False 0
+
+-- answer
+= 2
+= 0
+= -1
+```
+
+#### Exercise 19 - Experimenting pattern matching (matching tuples and lists)
+Solve the following exercises using pattern matching (w/ function signatures). 
+
+Write a function that
+1. returns `True` only if a string starts with the character `'A'`.
+```haskell
+-- answer
+f :: [Char] -> Bool
+f ('A':_) = True
+f _ = False
+```
+
+2. increments by one the values of a pair (i.e. 2-tuple).
+```haskell
+-- answer
+f :: (Num a, Num b) => (a, b)
+f (a, b) = (a + 1, b + 1)
+```
+
+3. reverts the order of a pair's elements.
+```haskell
+-- answer
+f :: (a, b) -> (b, a)
+f (a, b) = (b, a)
+```
+
+4. takes two pairs as arguments, and that returns a 4-tuple merging the values of the pair arguments. E.g. `f (2, 5) (True, 0)` returns `(2, 5, True, 0)`.
+```haskell
+-- answer
+f :: (a, b) -> (c, d) -> (a, b, c, d)
+f (a, b) (c, d) = (a, b, c, d)
+```
+
+#### Exercise 20 - Experimenting pattern matching and recursion
+Using pattern matching, write a function taking a parameter `n` and calculating the sum of 
+1. the natural numbers `1 + 2 + ... + n`.
+```haskell
+-- answer
+f :: Integer -> Integer
+f 1 = 1
+f n = n + f (n - 1)
+```
+2. the `n` first even numbers `0 + 2 + 4 + ...`
+```haskell
+-- answer
+f :: Integer -> Integer
+f 1 = 0
+f n = 2*(n-1) + f (n - 1)
+```
+
