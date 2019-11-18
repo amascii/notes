@@ -1,3 +1,4 @@
+## Problems
 #### Exercise 13 - Experimenting recursion
 Evaluate the following expressions.
 
@@ -238,3 +239,63 @@ f 1 = 0
 f n = 2*(n-1) + f (n - 1)
 ```
 
+#### Exercise 21 - Experimenting pattern matching and list recursion
+Using pattern matching, write a function `g l` whose input is a list of integers and that returns a list containing the corresponding opposite integers. Next, redefine the function `g` to rely on `map` instead.
+```haskell
+-- answer
+g :: [Int] -> [Int]
+g [] = [] 
+g l = - (head l) : g (tail l)
+
+g :: [Int] -> [Int]
+g l = map (\x -> -x) l
+```
+
+#### Exercise 22 - Experimenting list processing with folding
+Using folding, write a function
+1. `append l` whose unique parameter is a list of lists, and that returns the concatenation of these lists.
+```haskell
+-- answer
+append :: [[a]] -> [a]
+append l = foldl (++) [] l
+```
+
+2. `expt l` that calculates the exponentiation `u1**u2** ...` of the list elements `u1, u2 ...`
+```haskell
+-- answer
+expt :: [Integer] -> Integer
+expt l = foldr (\x acc -> x ^ acc) 1 l
+```
+
+## Applications
+#### Sorting algorithms
+```haskell
+-- insertion sort
+insert :: (Ord a) => a -> [a] -> [a]
+insert a [] = [a]
+insert a l@(x:xs) 
+	| a <= x = a : l
+	| otherwise = x : insert a xs
+
+insertion_sort :: (Ord a) => [a] -> [a]
+insertion_sort [] = []
+insertion_sort (x:xs) = insert x (insertion_sort xs) 
+
+-- merge sort
+merge :: (Ord a) => [a] -> [a] -> [a]
+merge l1 [] = l1
+merge [] l2 = l2
+merge l1@(x:xs) l2@(y:ys)
+	| x < y = x : merge xs l2
+	| x > y = y : merge l1 ys
+	| otherwise = x : y : merge xs ys
+
+merge_sort :: (Ord a) => [a] -> [a]
+merge_sort [] = []
+merge_sort [x] = [x]
+merge_sort l = merge (merge_sort left) (merge_sort right)
+        where (left, right) = splitAt (quot (length l) 2) l
+
+-- quick sort
+
+```
