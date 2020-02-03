@@ -32,8 +32,8 @@ True || ...             -- 6 True
 #### Exercise 13 - Recursion
 Evaluate the following expressions.
 
-1.
 ```haskell
+-- 1
 f x = if x == 0
         then 0
         else x + f (x - 1)
@@ -42,10 +42,8 @@ f 3
 -- answer
 3+(2+(1+0))
 = 6
-```
 
-2. 
-```haskell
+-- 2
 g x = if x > 8
         then 1
         else x + g (2 * x)
@@ -56,11 +54,11 @@ f 2
 = 15
 ```
 
-#### Exercise 14 - Experimenting list recursion
+#### Exercise 14 - List recursion
 Evaluate the following expressions.
 
-1.
 ```haskell
+-- 1
 f :: (Eq a, Num a) => [a] -> a
 f x = if x == []
         then 0
@@ -70,10 +68,8 @@ f [1, 2, 3]
 -- answer
 2*1 + 2*2 + 2*3
 = 12
-```
 
-2.
-```haskell
+-- 2
 g :: (Eq a) => [a] -> [a]
 g x
   | x == 0 = []
@@ -85,50 +81,53 @@ g [1, 2, 3]
 = [1, 2, 3]
 ```
 
-#### Exercise 15 - Experimenting list recursion
-1. Write a function `f x` that returns 
-the list of all the even integers in the interval [0,x]. (Use `even`)
+#### Exercise 15 - List recursion 2 
 ```haskell
+-- 1
+-- the list of all the even integers in the interval [0,x]. (Use `even`)
+
 -- answer
-f :: (Integral a) => a -> [a]
+f :: Int -> [Int]
 f x
   | x == 0 = [0]
   | even x = x : f (x - 2)
   | otherwise = f (x - 1)
-```
 
-2. Write a function `g l` whose input is a list of integers and
-which returns the list containing the corresponding opposite integers (i.e. return `-x` for `x`)
-```haskell
+-- 2 
+-- list of integers, returns the list containing the corresponding opposite integers (i.e. return `-x` for `x`)
 -- answer
-g :: (Integral a) => [a] -> [a]
+g :: [Int] -> [Int]
 g l
   | l == [] = []
   | otherwise = - (head l) : g (tail l)
+
+g l = map (\x -> -x) l
 ```
 
-#### Exercise 16 - Experimenting tail recursion
+#### Exercise 16 - Tail recursion
 1. Rewrite Exercise 14 using tail recursion.
+
 ```haskell
 -- answer
 -- 1
+f :: (Eq a, Num a) => [a] -> a
 f x = aux x 0
   where
-  aux :: Integer -> Integer -> Integer
-  aux x res = if x == 0
-                then res
-                else aux (x - 1) (res + x)
+  aux x res 
+    | x == [] = res
+    | otherwise = aux (tail x) (2 * (head x) + res)
 
--- 2                
-g x = aux x 1
+-- 2   
+g :: (Eq a, Num a) => [a] -> [a]
+g x = aux x []
   where
-  aux :: Integer -> Integer -> Integer
   aux x res
-    | x > 8 = res
-    | otherwise = aux (2 * x) (res + x)
+    | x == [] = reverse res
+    | otherwise = aux (tail x) ((head x) : res)
 ```
 
 2. Rewrite Exercise 15 using tail recursion.
+
 ```haskell
 -- answer
 -- 1
@@ -151,11 +150,11 @@ g l = aux l []
     | otherwise = aux (tail l) (- (head l) : res)
 ```
 
-#### Exercise 17 - Experimenting program termination
+#### Exercise 17 - Program termination
 Identify under which conditions the following programs terminate.
 
-1.
 ```haskell
+-- 1
 -- Computing the product x * (x+1) * (x+2) * ...
 f x = if x == 0
         then 1
@@ -163,10 +162,8 @@ f x = if x == 0
         
 -- answer
 x <= 0
-```
 
-2.
-```haskell
+-- 2
 -- Computing the sum x + (x+2) + ...
 g x = if x == 10
   then 0
@@ -174,10 +171,8 @@ g x = if x == 10
   
 -- answer
 even x, x <= 10
-```
 
-3.
-```haskell
+-- 3
 -- Computing the sum x + (x+2) + ...
 h x
   | x == 10 = 0
@@ -185,15 +180,18 @@ h x
   | otherwise x + h (x + 2)
   
 -- answer
-x <= 9
+x <= 11
 ```
 
-#### Exercise 18 - Experimenting pattern matching
-1. Evaluate.
+#### Exercise 18 - Pattern matching
+Evaluate.
+
 ```haskell
+-- 1
 f 1 _ = "result1"
 f _ _ = "result2"
 f _ 1 = "result3"
+
 f 2 3
 f 2 1
 f 1 1
@@ -202,13 +200,12 @@ f 1 1
 = "result2"
 = "result2"
 = "result1"
-```
 
-2. Evaluate.
-```haskell
+-- 2
 g True x = x
 g False 0 = -1
 g _ x = x + 1
+
 g False 1
 g True 0
 g False 0
@@ -219,42 +216,41 @@ g False 0
 = -1
 ```
 
-#### Exercise 19 - Experimenting pattern matching (matching tuples and lists)
+#### Exercise 19 - Pattern matching (matching tuples and lists)
 Solve the following exercises using pattern matching (w/ function signatures). 
-
 Write a function that
-1. returns `True` only if a string starts with the character `'A'`.
+
 ```haskell
+-- 1 returns `True` only if a string starts with the character `'A'`.
+
 -- answer
 f :: [Char] -> Bool
 f ('A':_) = True
 f _ = False
-```
 
-2. increments by one the values of a pair (i.e. 2-tuple).
-```haskell
+-- 2 increments by one the values of a pair (i.e. 2-tuple).
+
 -- answer
 f :: (Num a, Num b) => (a, b)
 f (a, b) = (a + 1, b + 1)
-```
 
-3. reverts the order of a pair's elements.
-```haskell
+-- 3 reverts the order of a pair's elements.
+
 -- answer
 f :: (a, b) -> (b, a)
 f (a, b) = (b, a)
-```
 
-4. takes two pairs as arguments, and that returns a 4-tuple merging the values of the pair arguments. E.g. `f (2, 5) (True, 0)` returns `(2, 5, True, 0)`.
-```haskell
+-- 4 takes two pairs as arguments and returns a 4-tuple merging the values of the pair arguments. E.g. `f (2, 5) (True, 0)` returns `(2, 5, True, 0)`.
+
 -- answer
 f :: (a, b) -> (c, d) -> (a, b, c, d)
 f (a, b) (c, d) = (a, b, c, d)
 ```
 
-#### Exercise 20 - Experimenting pattern matching and recursion
+#### Exercise 20 - Pattern matching and recursion
 Using pattern matching, write a function taking a parameter `n` and calculating the sum of 
 1. the natural numbers `1 + 2 + ... + n`.
+
 ```haskell
 -- answer
 f :: Integer -> Integer
@@ -262,6 +258,7 @@ f 1 = 1
 f n = n + f (n - 1)
 ```
 2. the `n` first even numbers `0 + 2 + 4 + ...`
+
 ```haskell
 -- answer
 f :: Integer -> Integer
@@ -271,6 +268,7 @@ f n = 2*(n-1) + f (n - 1)
 
 #### Exercise 21 - Experimenting pattern matching and list recursion
 Using pattern matching, write a function `g l` whose input is a list of integers and that returns a list containing the corresponding opposite integers. Next, redefine the function `g` to rely on `map` instead.
+
 ```haskell
 -- answer
 g :: [Int] -> [Int]
@@ -284,6 +282,7 @@ g l = map (\x -> -x) l
 #### Exercise 22 - Experimenting list processing with folding
 Using folding, write a function
 1. `append l` whose unique parameter is a list of lists, and that returns the concatenation of these lists.
+
 ```haskell
 -- answer
 append :: [[a]] -> [a]
@@ -291,6 +290,7 @@ append l = foldl (++) [] l
 ```
 
 2. `expt l` that calculates the exponentiation `u1**u2** ...` of the list elements `u1, u2 ...`
+
 ```haskell
 -- answer
 expt :: [Integer] -> Integer
@@ -299,6 +299,7 @@ expt l = foldr (\x acc -> x ^ acc) 1 l
 
 ## Applications
 #### Sorting algorithms
+
 ```haskell
 -- insertion sort
 insert :: (Ord a) => a -> [a] -> [a]
