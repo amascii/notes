@@ -240,7 +240,8 @@ f (a, b) = (a + 1, b + 1)
 f :: (a, b) -> (b, a)
 f (a, b) = (b, a)
 
--- 4 takes two pairs as arguments and returns a 4-tuple merging the values of the pair arguments. E.g. `f (2, 5) (True, 0)` returns `(2, 5, True, 0)`.
+-- 4 takes two pairs as arguments and returns a 4-tuple merging the values of the pair arguments. 
+-- E.g. `f (2, 5) (True, 0)` returns `(2, 5, True, 0)`.
 
 -- answer
 f :: (a, b) -> (c, d) -> (a, b, c, d)
@@ -248,7 +249,7 @@ f (a, b) (c, d) = (a, b, c, d)
 ```
 
 #### Exercise 20 - Pattern matching and recursion
-Using pattern matching, write a function taking a parameter `n` and calculating the sum of 
+Using pattern matching, write a function takes a parameter `n` and calculates the sum of 
 1. the natural numbers `1 + 2 + ... + n`.
 
 ```haskell
@@ -266,8 +267,9 @@ f 1 = 0
 f n = 2*(n-1) + f (n - 1)
 ```
 
-#### Exercise 21 - Experimenting pattern matching and list recursion
-Using pattern matching, write a function `g l` whose input is a list of integers and that returns a list containing the corresponding opposite integers. Next, redefine the function `g` to rely on `map` instead.
+#### Exercise 21 - Pattern matching and list recursion
+Using pattern matching, write a function `g l` that takes a list of integers and returns a list containing the corresponding additive inverse.
+Next, redefine the function `g` to rely on `map` instead.
 
 ```haskell
 -- answer
@@ -279,7 +281,7 @@ g :: [Int] -> [Int]
 g l = map (\x -> -x) l
 ```
 
-#### Exercise 22 - Experimenting list processing with folding
+#### Exercise 22 - List processing with folding
 Using folding, write a function
 1. `append l` whose unique parameter is a list of lists, and that returns the concatenation of these lists.
 
